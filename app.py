@@ -27,7 +27,7 @@ def charger_donnees():
         return population_verticale
 
     except FileNotFoundError:
-        st.error("Erreur : Le fichier 'population_clean.csv' est introuvable. Veuillez vérifier le chemin d'accès.")
+        st.error("Erreur : arrrrrggggg Le fichier 'population_clean.csv' est introuvable. Veuillez vérifier le chemin d'accès.")
         return None
 
 def creer_graphique_prediction(nom_pays, annee_coupure, df_complet):
