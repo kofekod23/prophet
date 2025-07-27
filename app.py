@@ -9,7 +9,7 @@ st.set_page_config(layout="wide", page_title="Prédiction de Population")
 def charger_donnees():
 
     try:
-        population_cleaned = pd.read_csv("../input/population_clean.csv")
+        population_cleaned = pd.read_csv("population_clean.csv")
         
         id_vars = ['Country Name', 'Continent']
         year_columns = [col for col in population_cleaned.columns if col not in id_vars]
@@ -27,7 +27,7 @@ def charger_donnees():
         return population_verticale
 
     except FileNotFoundError:
-        st.error("Erreur : Le fichier '../input/population_clean.csv' est introuvable. Veuillez vérifier le chemin d'accès.")
+        st.error("Erreur : Le fichier 'population_clean.csv' est introuvable. Veuillez vérifier le chemin d'accès.")
         return None
 
 def creer_graphique_prediction(nom_pays, annee_coupure, df_complet):
